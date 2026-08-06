@@ -2,6 +2,7 @@
 #include <vector>
 #include <numeric>
 
+// disjointed set, path compression
 class TerritoryDisjointedSet {
 private:
     std::vector<int> parents, areas;
@@ -59,7 +60,7 @@ public:
     }
 };
 
-int main(int argd, char *argv[]) {
+int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
     std::size_t n, q;
