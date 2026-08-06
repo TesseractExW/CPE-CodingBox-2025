@@ -81,7 +81,6 @@ int main(int argc, char *argv[]) {
         switch (cmd) {
         case 'A':
             std::cin >> a >> b;
-
             _dset.fight(a, b);
             break;
         default:
