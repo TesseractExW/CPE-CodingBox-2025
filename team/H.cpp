@@ -1,10 +1,11 @@
 #include <iostream>
+#include <cstdint>
 
 // prefix sums, math
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    long long a, b;
+    std::int64_t a, b;
     std::cin >> a >> b;
     a--;
 
