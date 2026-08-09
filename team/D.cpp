@@ -1,17 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstdint>
 
 // greedy, sorting
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    long long m;
+    std::int64_t m;
     std::size_t n;
     std::cin >> m >> n;
 
-    std::vector<long long> cnts(n);
-    for (long long &cnt : cnts) {
+    std::vector<std::int64_t> cnts(n);
+    for (std::int64_t &cnt : cnts) {
         std::cin >> cnt; 
     }
 
