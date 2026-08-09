@@ -5,7 +5,8 @@
 // disjointed set, path compression
 class TerritoryDisjointedSet {
 private:
-    std::vector<std::size_t> parents, areas;
+    std::vector<std::size_t> parents;
+    std::vector<std::uint64_t> areas;
     std::size_t mostArea = 0;
 
     std::size_t find(std::size_t crr) {
@@ -38,7 +39,7 @@ private:
     }
 
 public:
-    TerritoryDisjointedSet(std::vector<std::size_t> _areas) {
+    TerritoryDisjointedSet(std::vector<std::uint64_t> _areas) {
         areas = _areas;
 
         parents.resize(areas.size());
@@ -51,7 +52,7 @@ public:
         }
     }
 
-    std::pair<std::size_t, std::size_t> query() {
+    std::pair<std::size_t, std::uint64_t> query() {
         return { mostArea + 1, areas[mostArea] };
     }
 
@@ -66,8 +67,8 @@ int main(int argc, char *argv[]) {
     std::size_t n, q;
     std::cin >> n >> q;
 
-    std::vector<std::size_t> areas(n);
-    for (std::size_t &area : areas) {
+    std::vector<std::uint64_t> areas(n);
+    for (std::uint64_t &area : areas) {
         std::cin >> area;
     }
     
