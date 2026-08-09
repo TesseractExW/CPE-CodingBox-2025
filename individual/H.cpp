@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#include <cstdint>
 
 // graph theory, topological sort, dynamics programming
 namespace std {
@@ -17,7 +18,7 @@ int main(int argc, char *argv[]) {
 
     std::queue<std::size_t> _queue;
     std::matrix<std::size_t> graph(n);
-    std::vector<std::size_t> indegres(n, 0), dp(n, 0);
+    std::vector<std::uint64_t> indegres(n, 0), dp(n, 0);
 
     for (std::size_t i = 0; i < n; i++) {
         std::cin >> indegres[i];
