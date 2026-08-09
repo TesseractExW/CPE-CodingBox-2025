@@ -1,8 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <cstdint>
 
 // dynamics programming, grid, modulo
-constexpr long long mod = (long long)(1e9 + 7);
+constexpr std::int64_t mod = (std::int64_t)1e9 + 7;
+
+namespace std {
+    template <typename T>
+    using matrix = std::vector<std::vector<T>>;
+};
 
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
@@ -11,7 +17,7 @@ int main(int argc, char *argv[]) {
     std::cin >> r >> c;
     std::cin >> n;
 
-    std::vector<std::vector<long long>> dp(r + 1, std::vector<long long>(c + 1, 0));
+    std::matrix<std::int64_t> (r + 1, std::vector<std::int64_t>(c + 1, 0));
     dp[1][1] = 1;
 
     for (std::size_t i = 0; i < n; i++) {
