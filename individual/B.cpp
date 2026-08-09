@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <cstdint>
 
 // math
 int main(int argc, char *argv[]) {
@@ -10,7 +11,7 @@ int main(int argc, char *argv[]) {
     int t;
     std::cin >> t;
     for (int i = 0; i < t; i++) {
-        std::size_t n, d;
+        std::uint64_t n, d;
         std::cin >> n >> d;
 
         std::cout << 0.25l * d * d * (std::acosl(-1) - 0.5l * n * std::sinl(2 * std::acosl(-1) / n)) << '\n';
