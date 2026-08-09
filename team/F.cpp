@@ -2,27 +2,27 @@
 #include <vector>
 
 // dynamics programming, grid, modulo
-constexpr int mod = (int)(1e9 + 7);
+constexpr long long mod = (long long)(1e9 + 7);
 
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    int r, c, n;
+    std::size_t r, c, n;
     std::cin >> r >> c;
     std::cin >> n;
 
-    std::vector<std::vector<int>> dp(r + 1, std::vector<int>(c + 1, 0));
+    std::vector<std::vector<long long>> dp(r + 1, std::vector<long long>(c + 1, 0));
     dp[1][1] = 1;
 
-    for (int i = 0; i < n; i++) {
-        int x, y;
+    for (std::size_t i = 0; i < n; i++) {
+        std::size_t x, y;
         std::cin >> x >> y;
          
         dp[x][y] = -1;
     }
 
-    for (int i = 1; i <= r; i++) {
-        for (int j = 1; j <= c; j++) {
+    for (std::size_t i = 1; i <= r; i++) {
+        for (std::size_t j = 1; j <= c; j++) {
             if (dp[i][j] != 0) {
                 continue;
             } 
@@ -36,6 +36,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    std::cout << std::max(0, dp[r][c]);
+    std::cout << std::max(0ll, dp[r][c]);
     return 0;
 }

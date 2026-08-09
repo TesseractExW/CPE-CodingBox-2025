@@ -11,10 +11,10 @@ int main(int argc, char *argv[]) {
     std::cin >> n;
     n = 63 - std::countl_zero(n);
     
-    std::vector<int> prv = { 0 };
+    std::vector<std::size_t> prv = { 0 };
     
     for (std::size_t i = 0; i < n; i++) {
-        std::vector<int> crr(prv.size() * 2);
+        std::vector<std::size_t> crr(prv.size() * 2);
 
         for (std::size_t j = 0; j < crr.size(); j++) {
             std::cin >> crr[j];
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         std::swap(prv, crr);
     }
 
-    std::map<int, std::size_t> _map;
+    std::map<std::size_t, std::size_t> _map;
     
     for (std::size_t i = 0; i < prv.size(); i++) {
         if (_map.count(prv[i])) {
@@ -44,10 +44,10 @@ int main(int argc, char *argv[]) {
     std::cin >> q;
     
     for (int i = 0; i < q; i++) {
-        int x;
+        std::size_t x;
         std::cin >> x;
 
-        std::map<int, std::size_t>::iterator it = _map.upper_bound(x);
+        std::map<std::size_t, std::size_t>::iterator it = _map.upper_bound(x);
         if (it == _map.begin()) {
             std::cout << -1 << '\n';
         } else {

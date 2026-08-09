@@ -4,7 +4,7 @@
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    int a, b;
+    long long a, b;
     std::cin >> a >> b;
     a--;
 

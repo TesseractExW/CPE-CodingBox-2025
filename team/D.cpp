@@ -6,17 +6,18 @@
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    int m, n;
+    long long m;
+    std::size_t n;
     std::cin >> m >> n;
 
-    std::vector<int> cnts(n);
-    for (int &cnt : cnts) {
+    std::vector<long long> cnts(n);
+    for (long long &cnt : cnts) {
         std::cin >> cnt; 
     }
 
     std::sort(cnts.begin(), cnts.end(), std::greater<int>());
      
-    for (int i = 0; i < n; i++) {
+    for (std::size_t i = 0; i < n; i++) {
         m -= cnts[i];
          
         if (m <= 0) {

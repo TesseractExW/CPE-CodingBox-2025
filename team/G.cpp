@@ -4,16 +4,16 @@
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    int l, k, m, n;
+    std::size_t l, k, m, n;
     std::cin >> l >> k;
     std::cin >> m >> n;
 
-    int total = 0;
-    for (int i = 0; i < m * n; i++) {
-        int height;
+    std::size_t total = 0;
+    for (std::size_t i = 0; i < m * n; i++) {
+        std::size_t height;
         std::cin >> height;
 
-        total += std::max(0, height -  k);
+        total += std::max(0uz, height -  k);
     }
 
     std::cout << (total + l - 1) / l;

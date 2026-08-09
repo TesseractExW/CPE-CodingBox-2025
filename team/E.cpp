@@ -5,10 +5,10 @@
 // disjointed set, path compression
 class TerritoryDisjointedSet {
 private:
-    std::vector<int> parents, areas;
-    int mostArea = 0;
+    std::vector<std::size_t> parents, areas;
+    std::size_t mostArea = 0;
 
-    int find(int crr) {
+    std::size_t find(std::size_t crr) {
         if (parents[crr] == crr) {
             return crr;
         } else {
@@ -16,9 +16,9 @@ private:
         }
     }
 
-    bool unite(int i, int j) {
-        int a = find(i);
-        int b = find(j);
+    bool unite(std::size_t i, std::size_t j) {
+        std::size_t a = find(i);
+        std::size_t b = find(j);
 
         if (a == b) {
             return false;
@@ -38,7 +38,7 @@ private:
     }
 
 public:
-    TerritoryDisjointedSet(std::vector<int> _areas) {
+    TerritoryDisjointedSet(std::vector<std::size_t> _areas) {
         areas = _areas;
 
         parents.resize(areas.size());
@@ -51,11 +51,11 @@ public:
         }
     }
 
-    std::pair<int, int> query() {
+    std::pair<std::size_t, std::size_t> query() {
         return { mostArea + 1, areas[mostArea] };
     }
 
-    void fight(int a, int b) {
+    void fight(std::size_t a, std::size_t b) {
         unite(a - 1, b - 1);
     }
 };
@@ -66,8 +66,8 @@ int main(int argc, char *argv[]) {
     std::size_t n, q;
     std::cin >> n >> q;
 
-    std::vector<int> areas(n);
-    for (int &area : areas) {
+    std::vector<std::size_t> areas(n);
+    for (std::size_t &area : areas) {
         std::cin >> area;
     }
     
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
     for (std::size_t i = 0; i < q; i++) {
         char cmd;
         std::cin >> cmd;
-        int a, b;
+        std::size_t a, b;
 
         switch (cmd) {
         case 'A':
