@@ -1,5 +1,4 @@
 #include <iostream>
-#include <bitset>
 
 // string manipulation
 int main(int argc, char *argv[]) {
