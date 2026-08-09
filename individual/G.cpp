@@ -9,7 +9,7 @@ long long pmodulo(long long n) {
 }
 
 long long summation(long long n, long long skip) {
-    int m = n / skip;
+    long long m = n / skip;
     m = pmodulo(m);
 
     return pmodulo(pmodulo(m * (m + 1) / 2) * skip);
