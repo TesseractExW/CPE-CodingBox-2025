@@ -2,14 +2,14 @@
 #include <cstdint>
 
 // math, prefix sum
-constexpr long long mod = (long long)1e9 + 7;
+constexpr std::int64_t mod = (std::int64_t)1e9 + 7;
 
-long long pmodulo(long long n) {
+std::int64_t pmodulo(std::int64_t n) {
     return (n % mod + mod) % mod;
 }
 
-long long summation(long long n, long long skip) {
-    long long m = n / skip;
+std::int64_t summation(std::int64_t n, std::int64_t skip) {
+    std::int64_t m = n / skip;
     m = pmodulo(m);
 
     return pmodulo(pmodulo(m * (m + 1) / 2) * skip);
@@ -18,10 +18,10 @@ long long summation(long long n, long long skip) {
 int main() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    long long n;
+    std::int64_t n;
     std::cin >> n;
 
-    long long result = 0;
+    std::int64_t result = 0;
     result = pmodulo(result + summation(n, 1));
     result = pmodulo(result - summation(n, 7));
     result = pmodulo(result  + 2 * summation(n, 11));
