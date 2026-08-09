@@ -1,14 +1,15 @@
 #include <iostream>
+#include <cstdint>
 
 // modulo, division
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
-    std::size_t a, b;
+    std::uint64_t a, b;
     std::cin >> a >> b;
 
-    std::size_t _a = 0;
-    std::size_t _b = 0;
+    std::uint64_t _a = 0;
+    std::uint64_t _b = 0;
 
     while (a > 0) {
         _a += a % 10;
