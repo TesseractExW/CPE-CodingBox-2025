@@ -7,7 +7,7 @@ constexpr int INF = (int)1e9;
 
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
-    
+
     std::size_t n, h;
     std::cin >> n >> h;
 

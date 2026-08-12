@@ -17,13 +17,13 @@ int main(int argc, char *argv[]) {
     std::cin >> r >> c;
     std::cin >> n;
 
-    std::matrix<std::int64_t> (r + 1, std::vector<std::int64_t>(c + 1, 0));
+    std::matrix<std::int64_t> dp(r + 1, std::vector<std::int64_t>(c + 1, 0));
     dp[1][1] = 1;
 
     for (std::size_t i = 0; i < n; i++) {
         std::size_t x, y;
         std::cin >> x >> y;
-         
+
         dp[x][y] = -1;
     }
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
         for (std::size_t j = 1; j <= c; j++) {
             if (dp[i][j] != 0) {
                 continue;
-            } 
+            }
 
             if (dp[i - 1][j] > 0) {
                 (dp[i][j] += dp[i - 1][j]) %= mod;

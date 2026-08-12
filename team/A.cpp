@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
         _b += b % 10;
         b /= 10;
     }
-     
+
     std::cout << (_a == _b ? "Yes" : "No");
+
     return 0;
 }

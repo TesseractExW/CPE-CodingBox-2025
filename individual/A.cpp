@@ -1,9 +1,9 @@
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 
-// math, unsigned int 
+// math, unsigned int
 int main(int argc, char *argv[]) {
-    std::cin.tie(nullptr)->sync_with_stdio(false);    
+    std::cin.tie(nullptr)->sync_with_stdio(false);
 
     std::uint64_t first, best = 0;
     std::cin >> first;

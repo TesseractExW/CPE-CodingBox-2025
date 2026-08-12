@@ -6,10 +6,11 @@ int main() {
 
     int t;
     std::cin >> t;
+
     for (int i = 0; i < t; i++) {
         int n;
         std::cin >> n;
-        
+
         bool isAscending = true, isDecending = true;
         int prv;
         std::cin >> prv;
@@ -22,7 +23,7 @@ int main() {
             isDecending &= (crr <= prv);
             prv = crr;
         }
-        
+
         std::cout << (isAscending || isDecending ? "Yes" : "No") << '\n';
     }
     return 0;

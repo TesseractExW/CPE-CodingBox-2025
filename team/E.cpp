@@ -57,7 +57,7 @@ public:
     }
 
     void fight(std::size_t a, std::size_t b) {
-        unite(a - 1, b - 1);
+        unite(std::min(a, b) - 1, std::max(a, b) - 1);
     }
 };
 
@@ -71,7 +71,7 @@ int main(int argc, char *argv[]) {
     for (std::uint64_t &area : areas) {
         std::cin >> area;
     }
-    
+
     TerritoryDisjointedSet _dset(areas);
 
     for (std::size_t i = 0; i < q; i++) {

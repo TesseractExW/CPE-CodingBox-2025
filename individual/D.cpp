@@ -6,7 +6,7 @@
 // stack, queue
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
-    
+
     std::string str;
     std::cin >> str;
 
@@ -33,6 +33,6 @@ int main(int argc, char *argv[]) {
     for (std::size_t position : result) {
         std::cout << position << '\n';
     }
-    
+
     return 0;
 }

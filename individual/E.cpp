@@ -5,7 +5,7 @@
 // priority queue, min-max heap, greedy
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
-    
+
     int n;
     std::cin >> n;
     std::priority_queue<std::pair<int, int>> _pqueue;

@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
 
     std::string s;
     std::cin >> s;
-     
+
     char last = '\0';
     for (char ch : s) {
         ch = tolower(ch);

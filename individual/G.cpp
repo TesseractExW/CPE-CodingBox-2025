@@ -24,7 +24,7 @@ int main() {
     std::int64_t result = 0;
     result = pmodulo(result + summation(n, 1));
     result = pmodulo(result - summation(n, 7));
-    result = pmodulo(result  + 2 * summation(n, 11));
+    result = pmodulo(result + 2 * summation(n, 11));
     result = pmodulo(result - 2 * summation(n, 77));
 
     std::cout << result;
