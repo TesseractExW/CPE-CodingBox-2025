@@ -8,7 +8,7 @@ constexpr std::int64_t mod = (std::int64_t)1e9 + 7;
 namespace std {
     template <typename T>
     using matrix = std::vector<std::vector<T>>;
-};
+}
 
 int main(int argc, char *argv[]) {
     std::cin.tie(nullptr)->sync_with_stdio(false);
